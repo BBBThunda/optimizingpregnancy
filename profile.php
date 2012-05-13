@@ -1,0 +1,283 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Optimizing Pregnancy</title>
+  <meta name="description" content="Optimizing Pregnancy">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> 
+
+  <!-- JQuery UI 1.8.16 smoothness skin -->
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css"/>
+  
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  
+  
+</head>
+
+<body>
+	
+	
+	<div id="header"> Optimizing Pregnancy </div>
+	
+	<div id="main" role="content">
+		<div class="profileHeader"><h3> Profile </h3></div>
+		
+		<form name="userForm" id="userForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+			  <label for="firstname" class="usrMgmt_label">Firstname </label>
+			  <input type="text" name="firstname" id="firstname" size="30" value="" class="text-input" title="Enter Firstname"/>
+			  			  
+			  <br/>
+			  
+			  <label for="lastname" class="usrMgmt_label">Lastname </label>
+			  <input type="text" name="lastname" id="lastname" size="30" value="" class="text-input" title="Enter Lastname"/>
+			
+			  <br/>
+			  
+			  <label for="username" class="usrMgmt_label">Username </label>
+			  <input type="text" name="username" id="username" size="30" value="" class="text-input" title="Enter Username"/>
+			
+			  <br />
+			  
+			  <label for="country" class="usrMgmt_label">Country </label>
+			  <input type="text" name="country" id="country" size="30" value="" class="text-input" title="Enter Country"/>
+			  			  
+			  <br/>
+			  
+			  <label for="zipCode" class="usrMgmt_label">Zip Code </label>
+			  <input type="text" name="zipCode" id="zipCode" size="30" value="" class="text-input" title="Enter Zip Code"/>
+			  			  
+			  <br/>
+			
+			  <label for="babyAge" class="usrMgmt_label">Baby age at delivery (in weeks) </label>
+			  <input type="text" name="babyAge" id="babyAge" size="30" value="" class="text-input" title="Enter Baby's Age"/>
+			  			  
+			  <br/>
+			  <br/>
+			  
+			  <label for="momsMedicalCondition" class="usrMgmt_label">Mom's Health (Pregnancy Complications) </label>
+			  <select id="momsMedicalCondition" name="momsMedicalCondition" 
+			  		multiple="multiple" class="select-input" size="2" title="Select momsMedicalCondition">
+			  		<option value="Depression">Depression</option>
+			  		<option value="Gestational Diabetes">Gestational Diabetes</option>
+			  		<option value="Preclampsia">Preclampsia</option>
+			  </select>
+			  
+			  <br />
+			  
+			  <label for="pregnancyOutcome" class="usrMgmt_label"> Baby's Health (Pregnancy Outcome) </label>
+			  <select id="pregnancyOutcome" name="pregnancyOutcome" 
+			  		multiple="multiple" class="select-input" size="2" title="Select pregnancyOutcome">
+			  		<option value="Delivered Healthy Baby">Delivered Healthy Baby</option>
+			  		<option value="Delivered Baby with Complications">Delivered Baby with Complications</option>
+			  		<option value="Miscarriage or Stillbirth">Miscarriage or Stillbirth</option>
+			  </select>
+			  
+			  <br />
+			
+			  <label for="momsMedications" class="usrMgmt_label">Mom's Medications during pregnancy </label>
+			  <select id="momsMedications" name="momsMedications" 
+			  		multiple="multiple" class="select-input" size="2" title="Select momsMedications">
+			  		<option value="Insulin">Insulin</option>
+			  		<option value="Synthroid">Zoloft</option>
+			  		<option value="Paxil">Paxil</option>
+			  </select>
+			  
+			  <br />
+			  
+			  <label for="careDuringPregnancy" class="usrMgmt_label">Care during pregnancy </label>
+			  <select id="careDuringPregnancy" name="careDuringPregnancy" 
+			  		multiple="multiple" class="select-input" size="2" title="Select careDuringPregnancy">
+			  		<option value="Prenatal Consultation">Prenatal Consultation</option>
+			  		<option value="Genetic Testing">Genetic Testing</option>
+			  		<option value="HIV Test">HIV Test</option>
+			  		<option value="Flu Shot">Flu Shot</option>
+			  </select>
+			  
+			  <br />
+			  
+			  <label for="momsBehavior" class="usrMgmt_label">Mom's Behavior </label>
+			  <select id="momsBehavior" name="momsBehavior" 
+			  		multiple="multiple" class="select-input" size="2" title="Select momsBehavior">
+			  		<option value="Never Used Tobacco">Never Used Tobacco</option>
+			  		<option value="Used Tobacco, stopped during conceiving">Used Tobacco, stopped during conceiving</option>
+			  		<option value="Used Tobacco in first Trimester">Used Tobacco in first Trimester</option>
+			  		<option value="Used Tobacco for duration of pregnancy">Used Tobacco for duration of pregnancy</option>
+			  </select>
+			  
+			  <!--
+			  <label class="usrMgmt_label">Do you smoke </label>
+			  <input type="radio" name="smokeInputYes" class="smoke" /> Yes
+			  <input type="radio" name="smokeInputNo" class="smoke" /> No
+			  <input type="radio" name="smokeInputQuit" class="smoke" /> Quit
+			  <br />
+			  
+			  <label class="usrMgmt_label">Do you drink </label>
+			  <input type="radio" name="drinkInputYes" class="drink"/> Yes
+			  <input type="radio" name="drinkInputNo"  class="drink"/> No
+			  <input type="radio" name="drinkInputQuit"  class="drink"/> Quit
+			  <br />
+			  -->
+			  
+			<div id="createDiv">
+				<input type="submit" name="createUserButton" class="button" id="createUserButton" value="Submit"  title="Submit"/>
+			</div>
+	  </form>
+	  
+	  <div id="userMsgArea"></div>
+	</div>
+
+	<div id="footer"></div>
+	
+  <script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
+
+  <!-- JQuery UI 1.8.16 smoothness skin -->
+  <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  
+  <script id="usrMgmtScriptInit" type="text/javascript">
+	var dobJQueryObj;
+	var userFormJQueryObj;
+	var editMode = false;
+	var cancelEditButtonJQueryObj;
+	var passwordValidityErrors = '';
+	
+	$(document).ready(function () {
+		$(window).resize(userMgmtWindowResizeHandler);
+		userMgmtWindowResizeHandler();
+		
+		userFormJQueryObj = $('#userForm').find(':input').addClass('roundedInput');
+		
+		var smokeInputData = 'Yes';
+		var drinkInputData = 'Yes';
+	
+		//smokeInputData = $("#userForm input.smoke[type='radio']:checked").val();
+		//drinkInputData = $("#userForm input.drink[type='radio']:checked").val();
+		
+		
+		$('#createUserButton').click(function(event){
+									event.preventDefault();
+									debugger;
+																		
+									var errMsg = validateUserForm();
+									
+									if( errMsg !== '' ) {
+										$('#userMsgArea').empty().append('<span class="usrMgmtErrorMsg">'+errMsg+'</span>').addClass('errorBackground');
+										return;
+									} else {
+										$('#userMsgArea').empty().addClass('defaultBackground');
+									}
+									
+									var query = {
+														
+														firstname 				:	$('#firstname').val(),
+														lastname 				:	$('#lastname').val(),
+														username		 		: 	$('#username').val(),
+														country		 			: 	$('#country').val(),
+														zipcode 				:	$('#zipCode').val(),
+														race	 				:	$('#race').val(),
+														babyAge 				:	$('#babyAge').val(),
+														momsMedicalCondition 	: 	$('#momsMedicalCondition').val(),
+														pregnancyOutcome	 	: 	$('#pregnancyOutcome').val(),
+														momsMedications		 	: 	$('#momsMedications').val(),
+														careDuringPregnancy	 	: 	$('#careDuringPregnancy').val(),
+														momsBehavior		 	: 	$('#momsBehavior').val()
+														//smoke					:	smokeInputData,
+														//drink					:	drinkInputData
+																		
+												 };
+									
+									$.post("submitProfile.php", query);
+							  }
+		);
+		
+		if( $.datepicker ) {
+			dobJQueryObj = $('#dob').datepicker({
+											defaultDate: new Date(),
+											changeMonth: true,
+											numberOfMonths: 3,
+											gotoCurrent: true,
+											showButtonPanel: true,
+											onSelect: function( selectedDate ) {
+												var option = this.id == "from" ? "minDate" : "maxDate",
+													instance = $( this ).data( "datepicker" ),
+													date = $.datepicker.parseDate(
+														instance.settings.dateFormat ||
+														$.datepicker._defaults.dateFormat,
+														selectedDate, instance.settings );
+												
+												window.dobJQueryObj.not( this ).datepicker( "option", option, date );
+											}
+										});
+		}
+		
+		
+	});
+	
+	function resultHandler(returnValue) {
+		debugger;
+		if( returnValue.result ) { 
+			clearUserForm();
+			getUsers();
+			$('#userMsgArea').empty().append('<span class="successFg">Added User to system</span>');
+		} else {
+			var errorMsg = returnValue.error.message;
+			
+			if( errorMsg === '' && returnValue.error.data !== '' ) {
+				errorMsg = returnValue.error.data;
+			}
+			
+			$('#userMsgArea').empty().append('<span class="msgAreaWrapper">Error: '+errorMsg+'</span>');
+			
+		}
+		
+		setInterval(removeUserMgmtMsg, 10000); // 10 secs
+	}
+	
+	function removeUserMgmtMsg() {
+		$('#userMsgArea').empty();
+	}
+	
+	function validateUserForm() {
+		var errorMsg = '';
+		
+		return errorMsg;
+	}
+	
+	function clearUserForm() {
+		$('.text-input').each(function() {
+			this.value = '';
+		});
+		
+		$('.select-input').each(function() {
+			this.selectedIndex = -1;
+		});
+		
+		removeUserMgmtMsg();
+		
+		editMode = false;
+	}
+	
+	/**
+	 * handler for window resize
+	 */	
+	function userMgmtWindowResizeHandler() {
+		 userMgmtLayoutResizeHandler();
+	}
+
+	function userMgmtLayoutResizeHandler() {
+	}
+  </script>
+  
+</body>
+</html>
