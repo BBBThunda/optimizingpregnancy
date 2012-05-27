@@ -9,6 +9,7 @@
 <?php
 
 ?>
+
 <a href="/newpatient.php">List Patient</a>
 <a href="/listpatient.php">List Patient</a>
 <a href="/editpatient.php">List Patient</a>
