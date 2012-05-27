@@ -9,5 +9,14 @@
 <?php
 
 ?>
+<a href="/newpatient.php">List Patient</a>
+<a href="/listpatient.php">List Patient</a>
+<a href="/editpatient.php">List Patient</a>
+<a href="/deletepatient.php">List Patient</a>
+<a href="/profile.php">List Patient</a>
+<a href="/newkb.php">List Patient</a>
+<a href="/editkb.php">List Patient</a>
+<a href="/deletekb.php">List Patient</a>
+<a href="/listkb.php">List Patient</a>
 </body>
 </html>
